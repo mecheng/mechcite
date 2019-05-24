@@ -42,7 +42,7 @@ setup(
     setup_requires=setup_requirements,
     test_suite='tests',
     tests_require=test_requirements,
-    url='https://gitlab.com/pymech/mechmat',
-    version='0.0.1',
+    url='https://github.com/mecheng/mechcite',
+    version='0.1.0',
     zip_safe=False,
 )
