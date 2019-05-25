@@ -31,7 +31,7 @@ setup(
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
     ],
-    description="Python package for the definition of materials used during mechanical engineering calculations",
+    description="Python package for decorating classes and functions with a citation and generating a bibliography when those are used",
     install_requires=requirements,
     license="MIT license",
     long_description=readme + '\n\n' + history,

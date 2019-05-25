@@ -9,11 +9,15 @@ class cite(object):
         self.bib = Bibliography()
 
     def __call__(self, f):
-        @wraps(f)
-        def wrapped_f(*args, **kwargs):
-            if not self.used:
-                self.bib.cite(self.key)
-                self.used = True
-            return f(*args, **kwargs)
+        if hasattr(f, '__call__'):
+            @wraps(f)
+            def wrapped_f(*args, **kwargs):
+                if not self.used:
+                    self.bib.cite(self.key)
+                    self.used = True
+                return f(*args, **kwargs)
 
-        return wrapped_f
+            return wrapped_f
+        else:
+            f._cite = self.key
+            return f
