@@ -8,6 +8,7 @@ class cite(object):
         self.used = False
         self.bib = Bibliography()
 
+
     def __call__(self, f):
         if hasattr(f, '__call__'):
             @wraps(f)

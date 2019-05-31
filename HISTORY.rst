@@ -7,3 +7,12 @@ History
 
 * First release on PyPI.
 
+0.2.1 (2019-05-31)
+------------------
+
+* cite attribute for non-callable object
+
+0.2.2 (2019-05-31)
+------------------
+
+* Append bib functionality works

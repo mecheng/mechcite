@@ -19,7 +19,14 @@ class Bibliography(metaclass=Singleton):
 
     def load_bib(self, filename, append=False):
         parser = bibtex.Parser()
-        self._bib = parser.parse_file(filename)
+        if not append:
+            self._bib = parser.parse_file(filename)
+        else:
+            bib = parser.parse_file(filename)
+            for e in bib.entries:
+                if e not in self._bib.entries:
+                    entry = bib.entries[e]
+                    self._bib.add_entry(entry.key, entry)
 
     def cite(self, key):
         if key in self._bib.entries:
