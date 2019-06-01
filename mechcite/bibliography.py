@@ -74,3 +74,5 @@ class Bibliography(metaclass=Singleton):
     def _repr_latex_(self):
         writer = self._tbl_writer(LatexTableWriter(), r'\textit{{{}}}')
         return writer.write_table()
+
+bib = Bibliography()
