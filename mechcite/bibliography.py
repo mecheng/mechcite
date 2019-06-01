@@ -32,6 +32,9 @@ class Bibliography(metaclass=Singleton):
         if key in self._bib.entries:
             self._bib.citations.add(key)
 
+    def loaded(self):
+        return hasattr(self, '_bib')
+
     def _tbl_writer(self, writer, italic):
         writer.table_name = 'Bibliography'
         writer.headers = ['Index', 'Citation']
