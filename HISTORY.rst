@@ -22,3 +22,8 @@ History
 
 * Added bib concrete object
 * Allows user to check if bibtex is loaded
+
+0.2.4 (2019-06-01)
+------------------
+
+* bug fix in repr html/markdown/latex
