@@ -65,14 +65,14 @@ class Bibliography(metaclass=Singleton):
 
     def _repr_markdown_(self):
         writer = self._tbl_writer(MarkdownTableWriter(), '*{}*')
-        return writer.write_table()
+        return writer.dumps()
 
     def _repr_html_(self):
         writer = self._tbl_writer(HtmlTableWriter(), '<em>{}</em>')
-        return writer.write_table()
+        return writer.dumps()
 
     def _repr_latex_(self):
         writer = self._tbl_writer(LatexTableWriter(), r'\textit{{{}}}')
-        return writer.write_table()
+        return writer.dumps()
 
 bib = Bibliography()
