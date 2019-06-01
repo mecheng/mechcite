@@ -16,3 +16,9 @@ History
 ------------------
 
 * Append bib functionality works
+
+0.2.3 (2019-06-01)
+------------------
+
+* Added bib concrete object
+* Allows user to check if bibtex is loaded
